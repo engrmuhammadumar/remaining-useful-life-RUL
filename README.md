@@ -3,4 +3,4 @@ This repository contains codes and resources that were used for predicting RUL o
 
 
 Pressure Fluid Flow 
-Concrete Structures
+Concrete Structures (run-to-failure)
