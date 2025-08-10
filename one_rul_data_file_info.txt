@@ -1,0 +1,37 @@
+=============== FULL DATASET OVERVIEW ===============
+Header Info (from .wfs)
+--------------------------
+- Total Channels       : 8 AE sensors
+- Sampling Frequency   : 5,000,000 Hz (5 MHz)
+- Max Voltage          : ~29.7 V
+- Data Type            : int16 (converted to double)
+- Voltage Scaling      : max_v / 32767 (≈ 0.00091 V per count)
+
+Signal Block Info
+---------------------
+- Samples per Second per Channel : 5,000,000
+- Bytes per Sample               : 2 bytes (int16)
+- Total Samples per Second       : 5,000,000 samples × 8 channels = 40,000,000 samples
+- Bytes per Second               : 40,000,000 × 2 = 80,000,000 bytes/sec
+
+
+Total Duration (estimated)
+-----------------------------
+- Approx. Duration     : 1017 seconds (16 minutes 57 seconds)
+- Sample Count Total   : ~5,000,000 × 1017 = 5.085 × 10⁹ samples per channel
+- Total Matrix Shape   : [5,085,000,000 x 8] if loaded fully
+
+Example Segment Info (1-sec)
+-------------------------------
+- Samples Loaded       : 5,000,000
+- Channels Loaded      : 8
+- Matrix Shape         : 5,000,000 x 8
+- Time Vector Range    : 0.000000 sec to 1.000000 sec
+
+Memory Considerations
+------------------------
+- Each 1-sec chunk     : ~80 MB in RAM
+- Full 1017-sec data   : ~81 GB RAM (not practical to load all at once)
+- Suggested Strategy   : Process 1-second (or smaller) chunks iteratively
+
+=====================================================
